@@ -1,6 +1,4 @@
 ﻿#include "ThreadPool.h"
-#include <iostream>
-#include <random>
 
 using namespace std;
 
@@ -18,8 +16,9 @@ void Binet(uint32_t n)
         }
         f += fff;
     }
-    long long fn = (round)(f / 10000.0);
-    printf("Fibonachi value for %d element = %lld\n", n, fn);
+
+    long long fn = static_cast<long long>(round(f / 10000.0));
+    printf("Fibonacci value for %d element = %lld\n", n, fn);
 }
 
 
@@ -37,7 +36,4 @@ int main()
 
         }
     }
-
-
-
 }
